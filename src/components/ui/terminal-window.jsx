@@ -5,7 +5,6 @@ const TerminalWindow = ({ children }) => {
   return (
     <div className="w-full flex justify-center items-center p-4">
       <div className="w-full max-w-[1024px] bg-[#0f0f0f] rounded-lg shadow-2xl border border-white/10 overflow-hidden">
-        {/* HEADER BAR (Titlebar) */}
         <div className="h-12 bg-[#000000] flex items-center justify-between px-4 select-none border-b border-black/20">
           {/* Left: Search and Menu Icons */}
           <div className="flex items-center space-x-4">
