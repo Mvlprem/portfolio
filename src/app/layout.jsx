@@ -1,5 +1,6 @@
 import "./globals.css";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react";
 
 // Custom Fonts
 const drukWide = localFont({
@@ -44,6 +45,7 @@ export default function RootLayout({ children }) {
 
         {/* The Actual Content */}
         <main>{children}</main>
+        <Analytics />
       </body>
     </html>
   );
