@@ -8,7 +8,7 @@ export default function ClientInfo() {
     city: "...",
     state: "...",
     browser: "...",
-    os: "UNKNOWN_OS",
+    os: "DETECTING...",
   });
 
   useEffect(() => {
