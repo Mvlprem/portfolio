@@ -30,7 +30,7 @@ export default function Home() {
               <div className="mt-4 flex items-center gap-2">
                 <div className="w-8 h-[1px] bg-green-500/50" />
                 <p className="font-plex text-[10px] md:text-xs tracking-[0.4em] text-green-500/90 uppercase">
-                  SOC_Analyst_Tier_1
+                  SOC_Analyst
                 </p>
               </div>
             </div>
