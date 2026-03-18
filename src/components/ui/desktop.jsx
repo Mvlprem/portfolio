@@ -26,7 +26,7 @@ export default function Desktop() {
             onClick={() => setOpenFile("certs")}
           />
           <DesktopIcon
-            name="projects.md"
+            name="Projects.md"
             icon="/projects.svg"
             onClick={() => setOpenFile("projects")}
           />
