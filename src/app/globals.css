@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* Bg Pattern */
+@layer utilities {
+  .bg-dot-pattern {
+    background-image:
+      radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+      radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 12px 12px;
+    background-position:
+      0 0,
+      20px 20px;
+  }
+}
+
+/* L-Brackets */
+@layer components {
+  .hud-corner {
+    @apply absolute w-8 h-8 border-white/40 pointer-events-none;
+  }
+  .corner-tl {
+    @apply top-0 left-0 border-t-2 border-l-2;
+  }
+  .corner-tr {
+    @apply top-0 right-0 border-t-2 border-r-2;
+  }
+  .corner-bl {
+    @apply bottom-0 left-0 border-b-2 border-l-2;
+  }
+  .corner-br {
+    @apply bottom-0 right-0 border-b-2 border-r-2;
+  }
+}
+
+/* Cursor Animation */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.animate-cursor {
+  animation: blink 1s step-end infinite;
+}
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-druk);
+  text-transform: uppercase;
+}
+
+body,
+p,
+span {
+  font-family: var(--font-plex);
+}
