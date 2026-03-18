@@ -5,10 +5,10 @@ export default function Certs() {
         CERTIFICATIONS
       </h1>
 
+      {/* Google Cybersecurity */}
       <div className="grid grid-cols-1 gap-6">
-        {/* Google Cybersecurity Certificate Card */}
         <div className="bg-white/5 border border-white/10 p-6 rounded-lg flex flex-col md:flex-row gap-6">
-          {/* Badge Image - Centered on mobile, left-aligned on desktop */}
+          {/* Badge Image */}
           <div className="w-24 h-24 bg-white/5 rounded-md flex-shrink-0 flex items-center justify-center border border-white/5 mx-auto md:mx-0">
             <img
               src="/badge/google.png"
@@ -57,7 +57,7 @@ export default function Certs() {
               </div>
             </div>
 
-            {/* Core Skills Gained - Visualized as tags */}
+            {/* Core Skills as tags */}
             <div className="flex flex-wrap justify-center md:justify-start gap-2 pt-2">
               {["Python", "SQL", "Linux", "BASH", "TCP/IP", "OSI"].map(
                 (skill) => (
@@ -71,13 +71,6 @@ export default function Certs() {
               )}
             </div>
           </div>
-        </div>
-
-        {/* Placeholder for your upcoming THM Cert */}
-        <div className="border-2 border-dashed border-white/5 p-8 rounded-lg flex items-center justify-center opacity-30">
-          <p className="text-gray-600 font-plex text-[10px] tracking-[0.3em] uppercase">
-            Waiting for: THM Security 101 Path...
-          </p>
         </div>
       </div>
     </div>
