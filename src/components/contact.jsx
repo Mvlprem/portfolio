@@ -6,7 +6,6 @@ export default function Contact() {
       </h1>
 
       <div className="grid grid-cols-1 gap-8">
-        {/* Left Side: The "Direct Message" feel */}
         <div className="space-y-6">
           <p className="text-gray-400 font-plex leading-relaxed">
             Whether you have a{" "}
@@ -16,8 +15,8 @@ export default function Contact() {
             connect on LinkedIn.
           </p>
 
+          {/* Email */}
           <div className=" flex flex-col md:flex-row gap-4">
-            {/* Email */}
             <a
               href="mailto:mvl.prem@outlook.com"
               className="flex-1 flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-lg hover:border-emerald-500/50 hover:bg-white/10 transition-all group"

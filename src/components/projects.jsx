@@ -7,10 +7,10 @@ export default function Projects() {
           OPEN SOURCE
         </h1>
 
+        {/* Simple Icons */}
         <div className="grid grid-cols-1 gap-6">
-          {/* Google Cybersecurity Certificate Card */}
           <div className="bg-white/5 border rounded-lg border-white/10 p-6 flex flex-col md:flex-row gap-6">
-            {/* Badge Image - Centered on mobile, left-aligned on desktop */}
+            {/* Image */}
             <div className="w-28 h-28 rounded-lg  bg-white/5 flex-shrink-0 flex items-center justify-center border border-white/5 mx-auto md:mx-0">
               <img
                 src="/projects/simple-icons.svg"
@@ -19,7 +19,7 @@ export default function Projects() {
               />
             </div>
 
-            {/* Cert Details */}
+            {/* Project Details */}
             <div className="flex-1 space-y-3 text-center md:text-left">
               <div className="flex flex-col gap-2">
                 <p className="text-xl text-white tracking-tight">
@@ -62,10 +62,10 @@ export default function Projects() {
           PERSONAL_PROJECTS
         </h1>
 
+        {/* Portfolio */}
         <div className="grid grid-cols-1 gap-6">
-          {/* Google Cybersecurity Certificate Card */}
           <div className="bg-white/5 border rounded-lg border-white/10 p-6 flex flex-col md:flex-row gap-6">
-            {/* Badge Image - Centered on mobile, left-aligned on desktop */}
+            {/* Image */}
             <div className="w-28 h-28 rounded-lg  bg-white/5 flex-shrink-0 flex items-center justify-center border border-white/5 mx-auto md:mx-0">
               <img
                 src="/projects/icon.svg"
@@ -74,7 +74,7 @@ export default function Projects() {
               />
             </div>
 
-            {/* Cert Details */}
+            {/* Project Details */}
             <div className="flex-1 space-y-3 text-center md:text-left">
               <div className="flex flex-col gap-2">
                 <p className="text-xl text-white tracking-tight">Portfolio</p>
