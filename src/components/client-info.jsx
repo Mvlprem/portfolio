@@ -18,7 +18,7 @@ export default function ClientInfo() {
         setData((prev) => ({
           ...prev,
           ip: json.ip,
-          isp: json.asn.org,
+          isp: json.company.name,
           city: json.location.city,
           state: json.location.state,
         }));
