@@ -10,8 +10,8 @@ export default function Globe() {
     fetch("https://api.ipapi.is")
       .then((res) => res.json())
       .then((json) => {
-        const lat = json.location.latitude;
-        const lon = json.location.longitude;
+        const lat = json.lat;
+        const lon = json.lon;
         setData({ lat, lon });
       })
       .catch((err) => console.error("IP Fetch failed:", err));
