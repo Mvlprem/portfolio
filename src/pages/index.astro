@@ -1,16 +1,197 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { projects } from "../data/projects";
+import { credentials } from "../data/credentials";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <!-- Hero Section -->
+  <section class="space-y-6 pt-2 sm:pt-6">
+    <!-- Identity & Title -->
+    <div class="space-y-1">
+      <h1 class="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-100">
+        Prem Munagapati
+      </h1>
+      <p class="text-neutral-400 text-base sm:text-lg">
+        Defensive Cybersecurity & SOC Operations
+      </p>
+    </div>
+
+    <!-- Availability Status Pill -->
+    <div>
+      <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-mono bg-neutral-900 border border-neutral-800 text-neutral-300 select-none">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span>Available for Jr. SOC &amp; Security Intern roles</span>
+      </div>
+    </div>
+
+    <!-- Bio Statement -->
+    <p class="text-neutral-300 text-base leading-relaxed sm:text-lg font-normal">
+      I've spent years self-learning programming, building software
+      applications, tools, and contributing to open-source projects. Now, I'm
+      directing that background into cybersecurity, focusing on network
+      protocols, incident analysis, and SOC workflows. I'm actively building
+      practical knowledge and completing hands-on labs.
+    </p>
+
+    <!-- Quick Action / Social Links -->
+    <div class="flex flex-wrap items-center gap-4 pt-1 font-mono text-xs sm:text-sm text-neutral-400">
+      <a
+        href="https://github.com/Mvlprem"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1 hover:text-neutral-100 underline decoration-neutral-700 underline-offset-4 hover:decoration-neutral-400 transition-colors py-1"
+      >
+        <span>GitHub</span>
+        <span class="text-neutral-500" aria-hidden="true">
+          &nearr;
+        </span>
+      </a>
+
+      <span class="text-neutral-700 select-none">&bull;</span>
+
+      <a
+        href="https://www.linkedin.com/in/mvlprem"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1 hover:text-neutral-100 underline decoration-neutral-700 underline-offset-4 hover:decoration-neutral-400 transition-colors py-1"
+      >
+        <span>LinkedIn</span>
+        <span class="text-neutral-500" aria-hidden="true">
+          &nearr;
+        </span>
+      </a>
+
+      <span class="text-neutral-700 select-none">&bull;</span>
+
+      <a
+        href="mailto:mvl.prem@outlook.com"
+        class="inline-flex items-center gap-1 hover:text-neutral-100 underline decoration-neutral-700 underline-offset-4 hover:decoration-neutral-400 transition-colors py-1"
+      >
+        <span>Email</span>
+        <span class="text-neutral-500" aria-hidden="true">
+          &nearr;
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="mt-14 sm:mt-16 space-y-8">
+    <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-100">
+      Projects
+    </h2>
+
+    <div class="space-y-8">
+      {projects.map((project) => (
+        <article class="group relative flex flex-col space-y-2">
+          <div class="flex items-center justify-between gap-2 flex-wrap">
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 font-medium text-neutral-200 group-hover:text-neutral-50 transition-colors"
+            >
+              <span class="underline decoration-neutral-800 underline-offset-4 group-hover:decoration-neutral-500 transition-colors">
+                {project.title}
+              </span>
+              <span
+                class="text-neutral-500 group-hover:text-neutral-300 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                aria-hidden="true"
+              >
+                &nearr;
+              </span>
+            </a>
+
+            {project.role && (
+              <span class="text-xs font-mono text-neutral-400 bg-neutral-900 border border-neutral-800 px-2 py-0.5 rounded">
+                {project.role}
+              </span>
+            )}
+          </div>
+
+          <p class="text-sm text-neutral-400 leading-relaxed">
+            {project.description}
+          </p>
+
+          <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs text-neutral-500">
+            {project.tags.map((tag) => (
+              <span>#{tag}</span>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Training & Credentials Section -->
+  <section class="mt-14 sm:mt-16 space-y-8">
+    <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-100">
+      Training &amp; Credentials
+    </h2>
+
+    <div class="space-y-8">
+      {credentials.map((cred) => (
+        <article class="group relative flex flex-col space-y-2">
+          <div class="flex items-center justify-between gap-2 flex-wrap">
+            <div class="flex items-center gap-2 flex-wrap">
+              <h3 class="font-medium text-neutral-200">{cred.title}</h3>
+              <span class="text-xs font-mono text-neutral-500">
+                &bull; {cred.issuer}
+              </span>
+            </div>
+
+            <div class="flex items-center gap-2">
+              {cred.status === "In Progress" ? (
+                <span class="text-xs font-mono text-amber-300/90 bg-amber-950/40 border border-amber-800/50 px-2 py-0.5 rounded">
+                  In Progress
+                </span>
+              ) : (
+                cred.verifyUrl && (
+                  <a
+                    href={cred.verifyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 text-xs font-mono text-neutral-400 hover:text-neutral-100 underline decoration-neutral-700 underline-offset-4 hover:decoration-neutral-400 transition-colors py-0.5"
+                  >
+                    <span>Verify</span>
+                    <span class="text-neutral-500" aria-hidden="true">
+                      &nearr;
+                    </span>
+                  </a>
+                )
+              )}
+            </div>
+          </div>
+
+          <p class="text-sm text-neutral-400 leading-relaxed">
+            {cred.description}
+          </p>
+
+          <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs text-neutral-500">
+            {cred.skills.map((skill) => (
+              <span>#{skill}</span>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Closing Contact Line -->
+  <footer class="mt-16 sm:mt-20 pt-8 border-t border-neutral-900 text-sm text-neutral-400 pb-12 sm:pb-16">
+    <p class="leading-relaxed">
+      Interested in discussing an opportunity or looking to connect? Feel free
+      to reach out directly at{" "}
+      <a
+        href="mailto:contact@yourdomain.com"
+        class="text-neutral-200 underline decoration-neutral-700 underline-offset-4 hover:decoration-neutral-400 hover:text-neutral-100 transition-colors"
+      >
+        mvl.prem@outlook.com
+      </a>
+    </p>
+  </footer>
+</BaseLayout>

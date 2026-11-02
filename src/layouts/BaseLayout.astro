@@ -1,0 +1,49 @@
+---
+import "@fontsource-variable/geist";
+import "@fontsource-variable/geist-mono";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Prem Munagapati — Cybersecurity",
+  description = "Personal portfolio of Prem Munagapati. Focused on systems, software applications, tooling, and cybersecurity.",
+} = Astro.props;
+
+const canonicalURL = new URL(
+  Astro.url.pathname,
+  Astro.site ?? "https://localhost:4321",
+);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- Centered single-column container matching nick.computer aesthetic -->
+    <div class="w-full max-w-2xl mx-auto px-6 py-12 md:py-20 flex-1 flex flex-col">
+      <main class="flex-1">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
