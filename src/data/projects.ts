@@ -18,8 +18,13 @@ export const projects: Project[] = [
     title: "Simple Icons",
     role: "Former Maintainer",
     description:
-      "Maintained one of the most widely used open-source brand icon libraries. Reviewed community pull requests, audited asset submissions, and helped enforce repository contribution standards.",
-    tags: ["Open-Source", "Code-Review"],
+      "Maintained a globally utilized open-source brand icon library, managing high-volume repository workflows. Audited and verified community asset submissions against strict technical specifications and compliance guidelines before merging pull requests.",
+    tags: [
+      "Open-Source",
+      "Asset-Verification",
+      "Quality-Assurance",
+      "Code-Review",
+    ],
     link: "https://github.com/simple-icons/simple-icons",
   },
 ];
